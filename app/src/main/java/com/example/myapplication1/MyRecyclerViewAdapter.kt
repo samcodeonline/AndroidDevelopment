@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class MyRecyclerViewAdapter:
+class MyRecyclerViewAdapter(var items:ArrayList<RecyclerViewModel>):
     RecyclerView.Adapter<MyRecyclerViewAdapter.MyRecyclerViewViewHolder>() {
 
 
@@ -21,7 +21,7 @@ class MyRecyclerViewAdapter:
     }
 
     override fun getItemCount(): Int {
-    return 18;
+    return items.size;
     }
 
     override fun onBindViewHolder(holder: MyRecyclerViewViewHolder, position: Int) {
